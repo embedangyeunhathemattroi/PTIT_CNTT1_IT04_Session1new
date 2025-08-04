@@ -1,7 +1,10 @@
-const arr1=[1,2,3,5,9];
-const arr2=[4,5,6,7,8];
-const combined =arr1.concat(arr2);
-const mergedSorted=combined.sort((a,b)=>a-b);
-console.log(arr1);
-console.log(arr2);
-console.log(mergedSorted);
+const gopMang = (arr1,arr2)=>{
+    const mangTong = [
+        ...arr1,
+        ...arr2
+    ]
+    const chiSo = mangTong.filter(e=> typeof e === 'number');
+    chiSo.sort((a,b)=>a-b);
+    return chiSo;
+}
+console.log(gopMang([1,3,`n`,0],[9,4,2,`k`]));
